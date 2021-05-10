@@ -7,7 +7,7 @@
 body{
      margin: 0 auto;
    max-width: 1500px;
-    background-color: rgb(226, 219, 219);
+    background-color: rgb(219, 193, 47);
 }
 
 .header, .section_location{
@@ -66,7 +66,6 @@ padding: 0;
  }
 }
 
-
 .section_restaurants{
      margin:1rem auto;
     max-width: 1500px;
@@ -79,8 +78,7 @@ padding: 0;
    .section_restaurant_cartes{
        display: flex;
        justify-content: space-between;
-       flex-wrap: wrap;
-       
+       flex-wrap: wrap;  
    }
    .section_restaurants_carte{
        background-color: white;
