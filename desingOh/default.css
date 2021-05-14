@@ -11,12 +11,17 @@ body {
 .header {
   margin: 0 auto;
   max-width: 1500px;
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 1.5rem 0 0.5rem 0;
   background-color: #ebebeb;
 }
 
 .header h1 {
   text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1500px;
 }
 
 .section_location {
@@ -233,6 +238,122 @@ footer .footerInfos {
   .footerInfos {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+/*la palette du gout*/
+.restaurant {
+  max-width: 1500px;
+  background-color: #e91818;
+}
+
+.restaurant .paletteDuGout_img {
+  width: 100%;
+  z-index: -10;
+}
+
+.restaurant .restaurantEntresPlats {
+  z-index: 3;
+  background-color: chartreuse;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.restaurant .restaurantEntresPlats .nomDuRestaurant_titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: brown;
+}
+
+.menu {
+  background-color: #bcc0bc;
+  margin: 1rem auto;
+  max-width: 1500px;
+}
+
+.menu .trait {
+  width: 3rem;
+  border: 2px solid green;
+}
+
+.menu .menuDescription {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+.menu .menuDescription .menuDescriptionPrix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.3rem 0 0 0;
+}
+
+.commander {
+  max-width: 1500px;
+  margin: 0 auto;
+  max-width: 1500px;
+  background-color: blueviolet;
+  text-align: center;
+}
+
+.commander .btn_commander {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: violet;
+}
+
+@media screen and (min-width: 1050px) {
+  .menu {
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+  .carteMenuEntree {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .carteMenuPlats {
+    margin: 0 1rem 0 2rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu .carteMenuEntree {
+    width: 100%;
+  }
+  .menu article {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .menu .carteMenuDesserts {
+    margin-left: 1rem;
+  }
+  .commander {
+    background-color: blueviolet;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .commander .btn_commander {
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=default.css.map */

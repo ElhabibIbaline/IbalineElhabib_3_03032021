@@ -10,13 +10,16 @@ body {
 .header {
 	margin: 0 auto;
 	max-width: 1500px;
-	padding: 1.5rem 1rem 0.5rem 1rem;
+	padding: 1.5rem 0 0.5rem 0;
 	background-color: rgb(235, 235, 235);
 	h1 {
 		text-align: center;
 	}
 }
-
+main{
+		margin: 0 auto;
+	max-width: 1500px;
+}
 .section_location {
 	margin: 0 auto;
 	max-width: 1500px;
@@ -75,7 +78,7 @@ body {
 
 	.section_fonctionnement_btn {
 		background-color: rgb(196, 189, 189);
-		margin: 1rem ;
+		margin: 1rem;
 		padding: 1.5rem;
 		border-radius: 1.5rem;
 	}
@@ -100,14 +103,13 @@ body {
 		font-weight: bold;
 	}
 }
-	@media screen and (min-width: 750px) {
-.section_btn{
-    display: flex;
-	justify-content: space-between;
-
-}
+@media screen and (min-width: 750px) {
+	.section_btn {
+		display: flex;
+		justify-content: space-between;
+	}
 	.section_fonctionnement_btn {
-	flex-grow: 1;
+		flex-grow: 1;
 	}
 }
 
@@ -142,19 +144,18 @@ body {
 	}
 }
 
-.section_restaurants_carte_description{
+.section_restaurants_carte_description {
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem;
 }
-.fa-heart{
+.fa-heart {
 	background-color: gray;
-	color:white;
-	
+	color: white;
 }
 
-.fa-heart:hover{
-	color:violet;
+.fa-heart:hover {
+	color: violet;
 }
 
 footer {
@@ -180,13 +181,115 @@ footer {
 		font-size: 1.5rem;
 		width: 100%;
 	}
-	.footerInfos{
+	.footerInfos {
 		flex-grow: 1;
 	}
 }
 @media screen and (max-width: 600px) {
-
-	.footerInfos{
+	.footerInfos {
 		flex-basis: 100%;
 	}
+}
+
+/*la palette du gout*/
+.restaurant {
+	max-width: 1500px;
+	background-color: rgb(233, 24, 24);
+
+	.paletteDuGout_img {
+		width: 100%;
+		z-index: -10;
+	}
+	.restaurantEntresPlats {
+		z-index: 3;
+		background-color: chartreuse;
+		margin-top: 2rem;
+		padding: 1rem;
+		border-radius: 1.5rem 1.5rem 0 0;
+		.nomDuRestaurant_titre {
+			display: flex;
+			justify-content: space-between;
+			background-color: brown;
+		}
+	}
+}
+.menu{
+	background-color: rgb(188, 192, 188);
+	margin:1rem auto;
+	max-width: 1500px;
+
+	.trait{
+		width: 3rem;
+	border:2px solid green;
+
+	}
+	.menuDescription{
+	background-color: white;
+	padding: 1rem ;
+	margin:1rem 0;
+	border-radius: 1rem;
+
+	.menuDescriptionPrix{
+		display: flex;
+		justify-content: space-between;
+		padding: 0.3rem 0 0 0;
+
+	}
+	}
+}
+.commander{
+	max-width: 1500px;
+   margin: 0 auto;
+	max-width: 1500px;
+	background-color: blueviolet;
+		text-align: center;
+		.btn_commander{
+	padding: 0.5rem 1.5rem;
+	border-radius:1.5rem;
+	background-color: violet;
+}
+
+}
+
+@media screen and (min-width: 1050px) {
+.menu{
+		margin: 0 auto;
+	max-width: 1500px;
+}
+.carteMenuEntree{
+			flex-basis: 30%;
+		}
+.carteMenuPlats{
+	margin: 0 1rem 0 2rem;
+}
+
+}
+@media screen and (min-width: 650px) {
+.menu{
+		display: flex;
+		flex-wrap: wrap;
+		.carteMenuEntree{
+			width: 100%;
+		}
+	
+article{
+			flex-grow: 1;
+	
+		}
+		.carteMenuDesserts{
+	margin-left: 1rem;
+}
+	}
+
+	.commander{
+	background-color: blueviolet;
+		text-align: center;
+		margin: 1rem 0;
+		.btn_commander{
+	padding: 0.5rem 2.5rem;
+	border-radius:0.5rem;
+	font-size: 1.4rem ;
+}
+
+}
 }
