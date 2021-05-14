@@ -6,7 +6,6 @@
 
 body {
   margin: 0 auto;
-  max-width: 1500px;
 }
 
 .header {
@@ -56,7 +55,7 @@ body {
 }
 
 .section_presentation .btn {
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin: 0.5rem 0 1rem 0;
   font-size: 1rem;
   font-weight: 500;
@@ -67,6 +66,7 @@ body {
 }
 
 .section_fonctionnement {
+  background-color: brown;
   margin: 1rem auto;
   max-width: 1500px;
   padding: 1rem;
@@ -75,6 +75,7 @@ body {
 .section_fonctionnement h2 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  padding: 1rem;
 }
 
 .section_btn {
@@ -83,7 +84,7 @@ body {
 
 .section_btn .section_fonctionnement_btn {
   background-color: #c4bdbd;
-  margin: 1rem 0.5rem;
+  margin: 1rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
 }
@@ -127,16 +128,10 @@ body {
 }
 
 .section_restaurants {
+  background-color: #a1e912;
   margin: 1rem auto;
   max-width: 1500px;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .section_restaurants h2 {
@@ -157,19 +152,12 @@ body {
 .section_restaurants .section_restaurants_carte {
   background-color: white;
   width: 19rem;
-  height: 16rem;
+  height: 18rem;
   border-radius: 1.5rem;
-  margin: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .section_restaurants .section_restaurants_carte img {
@@ -180,19 +168,33 @@ body {
   border-radius: 1.5rem 1.5rem 0 0;
 }
 
-.section_restaurants .section_restaurants_carte .section_restaurants__carte_description {
-  padding-left: 1rem;
+.section_restaurants_carte_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
 }
 
-.footer {
-  width: 100%;
+.fa-heart {
+  background-color: gray;
+  color: white;
+}
+
+.fa-heart:hover {
+  color: violet;
+}
+
+footer {
   background-color: #131212;
 }
 
-.footer .footer {
-  margin: 1rem auto;
+footer .footer {
+  margin: 0 auto;
   max-width: 1500px;
-  padding: 1rem;
+  padding: 2rem 1rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,23 +209,30 @@ body {
       flex-wrap: wrap;
 }
 
-.footer .fas {
+footer .fas {
   padding: 1rem 1rem 1rem 0;
 }
 
-.footer .mentionsLegales {
+footer .mentionsLegales {
   padding: 1rem 1rem 1rem 0;
 }
 
-.footer .footer_header {
+footer .footer_header {
   margin: 0 1rem 1rem 0;
   font-size: 1.5rem;
   width: 100%;
 }
 
+footer .footerInfos {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 @media screen and (max-width: 600px) {
-  .mentionsLegales {
-    width: 100%;
+  .footerInfos {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 /*# sourceMappingURL=default.css.map */
