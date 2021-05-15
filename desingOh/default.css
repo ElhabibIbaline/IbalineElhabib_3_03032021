@@ -6,13 +6,23 @@
 
 body {
   margin: 0 auto;
+  font-family: "Roboto" serif;
+}
+
+:root {
+  --primaire: #9356DC;
+  --secondaire: #FF79DA;
+  --tertiaire: #99E2D0;
+  --blanc: #ffffff;
+  --noir: #000000;
+  --gray: gray;
 }
 
 .header {
   margin: 0 auto;
   max-width: 1500px;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: #ebebeb;
+  background-color: var(--blanc);
 }
 
 .header h1 {
@@ -28,8 +38,10 @@ main {
   margin: 0 auto;
   max-width: 1500px;
   padding: 1rem;
-  background-color: #c7c4c4;
+  background-color: #e6e6e6;
   text-align: center;
+  -webkit-box-shadow: 0px -2px 1px 1px rgba(0, 0, 0, 0.77);
+          box-shadow: 0px -2px 1px 1px rgba(0, 0, 0, 0.77);
 }
 
 .section_location h4 {
@@ -41,7 +53,7 @@ main {
 }
 
 .section_presentation {
-  background-color: #ebebeb;
+  background-color: var(--blanc);
   margin: 0 auto;
   max-width: 1500px;
   padding: 2rem 1rem;
@@ -66,7 +78,7 @@ main {
   font-weight: 500;
   border-radius: 2rem;
   border: none;
-  background-color: violet;
+  background-color: var(--primaire);
   color: white;
 }
 
@@ -88,14 +100,14 @@ main {
 }
 
 .section_btn .section_fonctionnement_btn {
-  background-color: #c4bdbd;
+  background-color: #e6e6e6;
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
 }
 
 .section_btn .section_fonctionnement_btn_etapes {
-  background-color: #c90fc9;
+  background-color: var(--primaire);
   color: white;
   border-radius: 50%;
   padding: 0.6rem;
@@ -108,7 +120,7 @@ main {
 }
 
 .section_btn .fa-store {
-  color: #c90fc9;
+  color: var(--primaire);
 }
 
 .section_btn .section_fonctionnement_btn_action {
@@ -242,6 +254,30 @@ footer .footerInfos {
 }
 
 /*la palette du gout*/
+.header_paletteDuGout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+.header_paletteDuGout img {
+  width: 50%;
+}
+
+.header_paletteDuGout .fas {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .restaurant {
   max-width: 1500px;
   background-color: #e91818;

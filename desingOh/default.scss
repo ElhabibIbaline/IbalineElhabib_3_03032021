@@ -5,13 +5,22 @@
 }
 body {
 	margin: 0 auto;
+	font-family: "Roboto" serif;
+}
+:root {
+	--primaire: #9356DC;
+	--secondaire: #FF79DA;
+	--tertiaire: #99E2D0;
+	--blanc: #ffffff;
+	--noir: #000000;
+	--gray: gray;
 }
 
 .header {
 	margin: 0 auto;
 	max-width: 1500px;
 	padding: 1.5rem 0 0.5rem 0;
-	background-color: rgb(235, 235, 235);
+	background-color: var(--blanc);
 	h1 {
 		text-align: center;
 	}
@@ -24,8 +33,9 @@ main{
 	margin: 0 auto;
 	max-width: 1500px;
 	padding: 1rem;
-	background-color: rgb(199, 196, 196);
+	background-color: rgb(230, 230, 230);
 	text-align: center;
+	box-shadow:0px -2px 1px 1px rgba(0,0,0,0.77);
 	h4 {
 		font-size: 1.5rem;
 	}
@@ -35,7 +45,7 @@ main{
 }
 
 .section_presentation {
-	background-color: rgb(235, 235, 235);
+background-color: var(--blanc);
 	margin: 0 auto;
 	max-width: 1500px;
 	padding: 2rem 1rem;
@@ -57,7 +67,7 @@ main{
 		font-weight: 500;
 		border-radius: 2rem;
 		border: none;
-		background-color: violet;
+		background-color: var(--primaire);
 		color: white;
 	}
 }
@@ -77,13 +87,13 @@ main{
 	background-color: yellow;
 
 	.section_fonctionnement_btn {
-		background-color: rgb(196, 189, 189);
+			background-color: rgb(230, 230, 230);
 		margin: 1rem;
 		padding: 1.5rem;
 		border-radius: 1.5rem;
 	}
 	.section_fonctionnement_btn_etapes {
-		background-color: rgb(201, 15, 201);
+	background-color: var(--primaire);
 		color: white;
 		border-radius: 50%;
 		padding: 0.6rem;
@@ -95,7 +105,7 @@ main{
 	}
 
 	.fa-store {
-		color: rgb(201, 15, 201);
+		color:var(--primaire);
 	}
 
 	.section_fonctionnement_btn_action {
@@ -192,6 +202,22 @@ footer {
 }
 
 /*la palette du gout*/
+.header_paletteDuGout{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+		margin: 0 auto;
+		width: 100%;
+	max-width: 1500px;
+	padding: 1.5rem 0 0.5rem 0;
+	img{
+	width: 50%;
+	}
+	.fas{
+		font-size: 2rem;
+		cursor: pointer;
+	}
+}
 .restaurant {
 	max-width: 1500px;
 	background-color: rgb(233, 24, 24);
