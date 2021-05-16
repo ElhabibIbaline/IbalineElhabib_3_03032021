@@ -285,6 +285,10 @@ footer .footerInfos {
           flex-grow: 1;
 }
 
+footer a {
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
   .footerInfos {
     -ms-flex-preferred-size: 100%;

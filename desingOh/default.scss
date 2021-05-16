@@ -230,6 +230,9 @@ footer {
 	.footerInfos {
 		flex-grow: 1;
 	}
+	a{
+		color: white;
+	}
 }
 @media screen and (max-width: 600px) {
 	.footerInfos {
