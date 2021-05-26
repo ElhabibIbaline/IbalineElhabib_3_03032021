@@ -171,7 +171,7 @@ main {
 }
 
 .section_restaurants {
-  /*	background-color: rgb(161, 233, 18);*/
+  background-color: #a1e912;
   background-color: var(--background);
   margin: 0 auto;
   max-width: 1500px;
@@ -269,11 +269,15 @@ main {
 .heartHover {
   background-color: white;
   opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .heartHover:hover {
   color: var(--primaire);
   opacity: 1;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 @media screen and (min-width: 1050px) {
@@ -349,6 +353,7 @@ footer a {
 
 /*la palette du gout*/
 .header_paletteDuGout {
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,43 +393,6 @@ footer a {
   margin: 0 auto;
 }
 
-.restaurant .menu {
-  margin: 0 auto;
-  max-width: 1500px;
-}
-
-.restaurant .menu h4 {
-  font-family: "Roboto";
-  font-weight: 700;
-}
-
-.restaurant .menu P {
-  font-family: "Roboto";
-  font-weight: 400;
-}
-
-.restaurant .menu .trait {
-  width: 3rem;
-  border: 2px solid var(--tertiaire);
-}
-
-.restaurant .menu .menuDescription {
-  background-color: white;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 1rem;
-}
-
-.restaurant .menu .menuDescription .menuDescriptionPrix {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0.3rem 0 0 0;
-}
-
 .restaurant .restaurantEntresPlats {
   background-color: #f2f2f2;
   margin-top: -4rem;
@@ -452,12 +420,103 @@ footer a {
   font-weight: normal;
 }
 
+.restaurant .restaurantEntresPlats .menu {
+  margin: auto;
+}
+
+.restaurant .restaurantEntresPlats .menu .trait {
+  width: 3rem;
+  border: 2px solid var(--tertiaire);
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc(65%);
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li {
+  background-color: white;
+  position: relative;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-family: "Roboto", serif;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0.3rem 0.05rem #dadada;
+          box-shadow: 0 0 0.3rem 0.05rem #dadada;
+  width: 100%;
+  overflow: hidden;
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuTitre {
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuSousTitre {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuConfirmation {
+  position: absolute;
+  top: 0px;
+  right: -4.5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border-right: 4.5rem solid #8fdeca;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuConfirmation .menuPrix {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuConfirmation::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: url(/img/logo/confirm_logo.png);
+  background-size: 100%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuConfirmation:hover::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.restaurant .restaurantEntresPlats .menu .menuEntree li .menuConfirmation:hover {
+  right: 0px;
+}
+
 .commander {
   max-width: 1500px;
   margin: 1rem auto;
-  max-width: 1500px;
   /*	background-color: blueviolet;*/
   text-align: center;
+}
+
+.commander .btn_commander:hover {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .commander .btn_commander {
@@ -469,26 +528,47 @@ footer a {
   cursor: pointer;
 }
 
-@media screen and (min-width: 650px) {
-  .menu {
-    max-width: 1500px;
+@media screen and (min-width: 750px) {
+  .header_paletteDuGout {
+    max-width: 900px;
+    margin: auto;
+  }
+  .restaurant {
+    max-width: 900px;
     margin: 0 auto;
+  }
+  .menu {
+    max-width: 900px;
+    margin: 0 30%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .menu .carteMenuEntree {
-    width: 100%;
+  .menu .carteHeader {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 2rem;
   }
-  .menu article {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+  .nomDuRestaurant_titre {
+    background-color: var(--secondaire);
+    border-radius: 1.5rem;
+    margin: 2rem auto;
   }
-  .menu .carteMenuDesserts {
-    margin-left: 1rem;
+  .nomDuRestaurant_titre .heartHover {
+    background-color: var(--secondaire);
+  }
+  .nomDuRestaurant_titre:hover {
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
   }
   .commander {
     text-align: center;
@@ -498,31 +578,6 @@ footer a {
     padding: 0.5rem 2.5rem;
     border-radius: 0.5rem;
     font-size: 1.4rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .nomDuRestaurant_titre {
-    background-color: var(--secondaire);
-    border-radius: 1.5rem;
-    margin: auto;
-  }
-  .nomDuRestaurant_titre .heartHover {
-    background-color: var(--secondaire);
-  }
-  .menu {
-    /*	background-color: chartreuse;*/
-    margin: 0rem auto;
-    padding-top: 1.5rem;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  .menu .carteMenu {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-  }
-  .menu .carteMenuEntree {
-    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=default.css.map */
