@@ -488,7 +488,7 @@ footer a {
   top: 20px;
   width: 30px;
   height: 30px;
-  background: url(/img/logo/confirm_logo.png);
+  background: url(../img/logo/confirm_logo.png);
   background-size: 100%;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -571,13 +571,18 @@ footer a {
             transform: scale(1.01);
   }
   .commander {
+    max-width: 900px;
+    background-color: #f2f2f2;
     text-align: center;
-    margin: 1rem 0;
+    margin: auto;
   }
   .commander .btn_commander {
     padding: 0.5rem 2.5rem;
     border-radius: 0.5rem;
     font-size: 1.4rem;
+  }
+  .footer2 {
+    width: 900px;
   }
 }
 /*# sourceMappingURL=default.css.map */

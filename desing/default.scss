@@ -284,6 +284,7 @@ footer {
 	.footerInfos {
 		flex-basis: 100%;
 	}
+
 }
 
 /*la palette du gout*/
@@ -393,7 +394,7 @@ footer {
 						top: 20px;
 						width: 30px;
 						height: 30px;
-						background: url(/img/logo/confirm_logo.png);
+						background: url(../img/logo/confirm_logo.png);
 						background-size: 100%;
 						transform: rotate(360deg);
 						transition-duration: 0.35s;
@@ -462,13 +463,18 @@ max-width: 900px;
 			transform: scale(1.01);
 	}
 	.commander {
+		max-width: 900px;
+		background-color: rgb(242, 242, 242);
 		text-align: center;
-		margin: 1rem 0;
+		margin: auto;
 		.btn_commander {
 			padding: 0.5rem 2.5rem;
 			border-radius: 0.5rem;
 			font-size: 1.4rem;
 		}
+	}
+		.footer2{
+		width: 900px;
 	}
 }
 
