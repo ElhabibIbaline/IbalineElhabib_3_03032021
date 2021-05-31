@@ -495,6 +495,25 @@ a {
 		}
 	}
 }
+/*Animation apparitionMenu*/
+.menu {
+    animation: apparitionMenu 1s both;
+    -moz-animation: apparitionMenu 1s both;
+    -webkit-animation: apparitionMenu 1s both;
+    -o-animation: apparitionMenu 1s both;
+    opacity: 0;
+}
+
+.menu-1 { animation-delay: 0s; }
+.menu-2 { animation-delay: 0.5s; }
+.menu-3 { animation-delay: 1.5s; }
+
+@keyframes apparitionMenu {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+/*fin animation apparitionMenu*/
 
 .commander {
 	max-width: 1500px;
