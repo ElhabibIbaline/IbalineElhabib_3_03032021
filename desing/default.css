@@ -79,8 +79,8 @@
   opacity: 0.7;
   -webkit-animation: spin 4s linear infinite;
   animation: spin 4s linear infinite;
-  -webkit-animation-delay: .2s;
-          animation-delay: .2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 @-webkit-keyframes spin {
@@ -193,6 +193,13 @@ main {
   cursor: pointer;
 }
 
+.section_presentation .btn:hover {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .section_fonctionnement {
   /*	background-color: brown;*/
   margin: 0 auto;
@@ -220,6 +227,13 @@ main {
   padding: 1.5rem;
   border-radius: 1.5rem;
   cursor: pointer;
+}
+
+.section_btn .section_fonctionnement_btn:hover {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .section_btn .btn_action_3 {
@@ -665,7 +679,7 @@ a {
 /*fin animation apparitionMenu*/
 .commander {
   max-width: 1500px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   /*	background-color: blueviolet;*/
   text-align: center;
 }
@@ -684,20 +698,27 @@ a {
   color: white;
   background-color: var(--secondaire);
   cursor: pointer;
+  margin: 2rem auto;
 }
 
 @media screen and (min-width: 750px) {
   .header_paletteDuGout {
-    max-width: 900px;
     margin: auto;
   }
   .restaurant {
-    max-width: 900px;
-    margin: 0 auto;
+    margin: auto;
   }
-  .menu {
-    max-width: 900px;
-    margin: 0 30%;
+  .menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .menus .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -705,21 +726,32 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .menu .carteHeader {
+  .menu-1, .menu-3 {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  .menu-3 {
+    padding-left: 2rem;
+  }
+  .menu-2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    margin-top: 2rem;
+    margin: auto;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   .nomDuRestaurant_titre {
     background-color: var(--secondaire);
     border-radius: 1.5rem;
     margin: 2rem auto;
   }
-  .nomDuRestaurant_titre .heartHover {
+  .heartHover {
     background-color: var(--secondaire);
   }
   .nomDuRestaurant_titre:hover {
@@ -729,7 +761,6 @@ a {
             transform: scale(1.01);
   }
   .commander {
-    max-width: 900px;
     background-color: #f2f2f2;
     text-align: center;
     margin: auto;
@@ -739,8 +770,35 @@ a {
     border-radius: 0.5rem;
     font-size: 1.4rem;
   }
-  .footer2 {
-    width: 900px;
+}
+
+@media screen and (min-width: 1050px) {
+  .menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .menus .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=default.css.map */

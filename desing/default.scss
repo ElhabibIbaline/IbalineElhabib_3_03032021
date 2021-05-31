@@ -71,7 +71,7 @@
 	-webkit-animation: spin 4s linear infinite;
 	-o-animation: spin 4s linear infinite;
 	animation: spin 4s linear infinite;
-	animation-delay: .2s;
+	animation-delay: 0.2s;
 }
 
 @keyframes spin {
@@ -157,6 +157,10 @@ main {
 		transform: scale(1.1);
 		cursor: pointer;
 	}
+.btn:hover{
+	transition-duration: 1s;
+		transform: scale(1.1);
+}
 }
 
 .section_fonctionnement {
@@ -182,6 +186,10 @@ main {
 		padding: 1.5rem;
 		border-radius: 1.5rem;
 		cursor: pointer;
+	}
+		.section_fonctionnement_btn:hover {
+		transition-duration: 1s;
+		transform: scale(1.02);
 	}
 
 	.btn_action_3 {
@@ -497,27 +505,37 @@ a {
 }
 /*Animation apparitionMenu*/
 .menu {
-    animation: apparitionMenu 1s both;
-    -moz-animation: apparitionMenu 1s both;
-    -webkit-animation: apparitionMenu 1s both;
-    -o-animation: apparitionMenu 1s both;
-    opacity: 0;
+	animation: apparitionMenu 1s both;
+	-moz-animation: apparitionMenu 1s both;
+	-webkit-animation: apparitionMenu 1s both;
+	-o-animation: apparitionMenu 1s both;
+	opacity: 0;
 }
 
-.menu-1 { animation-delay: 0s; }
-.menu-2 { animation-delay: 0.5s; }
-.menu-3 { animation-delay: 1.5s; }
+.menu-1 {
+	animation-delay: 0s;
+}
+.menu-2 {
+	animation-delay: 0.5s;
+}
+.menu-3 {
+	animation-delay: 1.5s;
+}
 
 @keyframes apparitionMenu {
-    from { opacity:0; }
-    to { opacity:1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 /*fin animation apparitionMenu*/
 
 .commander {
 	max-width: 1500px;
-	margin: 1rem auto;
+	margin: 2rem auto;
 	/*	background-color: blueviolet;*/
 	text-align: center;
 	.btn_commander:hover {
@@ -531,44 +549,55 @@ a {
 		color: white;
 		background-color: var(--secondaire);
 		cursor: pointer;
+		margin: 2rem auto;
 	}
 }
 
 @media screen and (min-width: 750px) {
 	.header_paletteDuGout {
-		max-width: 900px;
 		margin: auto;
 	}
 	.restaurant {
-		max-width: 900px;
-		margin: 0 auto;
+		margin: auto;
 	}
-
-	.menu {
-		max-width: 900px;
-		margin: 0 30%;
+.menus{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	.menu{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		.carteHeader {
-			flex-basis: 100%;
-			margin-top: 2rem;
-		}
+		justify-content: space-between;
+	}
+}
+		.menu-1, .menu-3{
+		flex-grow: 2;
+
+	}
+		.menu-3{
+		padding-left: 2rem;
+
+	}
+		.menu-2{
+		flex-basis: 100%;
+		margin: auto;
+		order: -1;
 	}
 	.nomDuRestaurant_titre {
 		background-color: var(--secondaire);
 		border-radius: 1.5rem;
 		margin: 2rem auto;
-		.heartHover {
-			background-color: var(--secondaire);
-		}
 	}
+	.heartHover {
+		background-color: var(--secondaire);
+	}
+
 	.nomDuRestaurant_titre:hover {
 		transition-duration: 1s;
 		transform: scale(1.01);
 	}
 	.commander {
-		max-width: 900px;
+	
 		background-color: rgb(242, 242, 242);
 		text-align: center;
 		margin: auto;
@@ -578,7 +607,23 @@ a {
 			font-size: 1.4rem;
 		}
 	}
-	.footer2 {
-		width: 900px;
 	}
-}
+@media screen and (min-width: 1050px) {
+
+.menus{
+	display: flex;
+flex-wrap: nowrap;
+	.menu{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		flex-grow: 1;
+		flex-basis: 100%;
+
+order: 1;
+padding: 1rem;
+
+	}
+
+	}
+		}
