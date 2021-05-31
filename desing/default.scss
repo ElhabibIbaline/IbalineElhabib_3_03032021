@@ -12,6 +12,77 @@
 	--noir: #000000;
 	--background: #f6f6f6;
 }
+#chargement {
+	background-color: #9356dc;
+	position: fixed;
+	margin: auto;
+	display: flex;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffffb8;
+	z-index: 10;
+	animation: finChargement 4s both;
+	-moz-animation: finChargement 4s both;
+	-webkit-animation: finChargement 4s both;
+	-o-animation: finChargement 4s both;
+}
+
+@keyframes finChargement {
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+		pointer-events: none;
+	}
+}
+
+@-webkit-keyframes finChargement {
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+		pointer-events: none;
+	}
+}
+
+#chargement #chargementSpinner {
+	position: relative;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 10px solid var(--primaire);
+	border-top: 10px solid var(--secondaire);
+	border-bottom: 10px solid var(--tertiaire);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	opacity: 0.7;
+	-webkit-animation: spin 4s linear infinite;
+	-o-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+	animation-delay: .2s;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 h3 {
 	font-family: "Roboto";
 	font-weight: 100;
@@ -82,6 +153,9 @@ main {
 		border: none;
 		background-color: var(--secondaire);
 		color: white;
+		transition-duration: 0.25s;
+		transform: scale(1.1);
+		cursor: pointer;
 	}
 }
 
@@ -107,7 +181,9 @@ main {
 		margin: 1rem;
 		padding: 1.5rem;
 		border-radius: 1.5rem;
+		cursor: pointer;
 	}
+
 	.btn_action_3 {
 		background-color: rgb(247, 228, 247);
 	}
@@ -131,6 +207,10 @@ main {
 		font-size: 1rem;
 		font-weight: bold;
 	}
+}
+.section_fonctionnement_btn:hover {
+	transition-duration: 1s;
+	transform: scale(1s);
 }
 @media screen and (min-width: 800px) {
 	.section_fonctionnement {
@@ -207,6 +287,10 @@ main {
 			left: 68%;
 		}
 	}
+	.section_restaurants_carte:hover {
+		transition-duration: 1s;
+		transform: scale(1.01);
+	}
 }
 
 .section_restaurants_carte_description {
@@ -228,7 +312,7 @@ main {
 .heartHover {
 	background-color: white;
 	opacity: 0;
-	  transition: all 0.4s;
+	transition: all 0.4s;
 }
 
 .heartHover:hover {
@@ -275,21 +359,22 @@ footer {
 	}
 	.footerInfos {
 		flex-grow: 1;
+		transition-duration: 0.25s;
+		cursor: pointer;
 	}
-	a {
-		color: white;
-	}
+}
+a {
+	color: white;
 }
 @media screen and (max-width: 600px) {
 	.footerInfos {
 		flex-basis: 100%;
 	}
-
 }
 
-/*la palette du gout*/
+/*pages html*/
 .header_paletteDuGout {
-		background-color: rgb(242, 242, 242);
+	background-color: rgb(242, 242, 242);
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
@@ -343,13 +428,13 @@ footer {
 				border: 2px solid var(--tertiaire);
 			}
 			.menuEntree {
-					li p {
-						text-overflow: ellipsis;
-						overflow: hidden;
-						white-space: nowrap;
-						width: calc(65%);
-					}
-				
+				li p {
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+					width: calc(65%);
+				}
+
 				li {
 					background-color: white;
 					position: relative;
@@ -362,7 +447,7 @@ footer {
 					box-shadow: 0 0 0.3rem 0.05rem #dadada;
 					width: 100%;
 					overflow: hidden;
-				
+
 					.menuTitre {
 						padding: 1rem 1rem 0 1rem;
 						font-weight: bold;
@@ -416,9 +501,9 @@ footer {
 	margin: 1rem auto;
 	/*	background-color: blueviolet;*/
 	text-align: center;
-		.btn_commander:hover {
-			  transition-duration: 1s;
-			transform: scale(1.1);
+	.btn_commander:hover {
+		transition-duration: 1s;
+		transform: scale(1.1);
 	}
 	.btn_commander {
 		padding: 0.5rem 1.5rem;
@@ -427,26 +512,26 @@ footer {
 		color: white;
 		background-color: var(--secondaire);
 		cursor: pointer;
-			}
+	}
 }
 
 @media screen and (min-width: 750px) {
 	.header_paletteDuGout {
-max-width: 900px;
-			margin: auto;
-}
-.restaurant {
-	max-width: 900px;
-	margin: 0 auto;
-		}
-	
+		max-width: 900px;
+		margin: auto;
+	}
+	.restaurant {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
 	.menu {
-			max-width: 900px;
-			margin: 0 30%;
-		display: flex;	
+		max-width: 900px;
+		margin: 0 30%;
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		.carteHeader{
+		.carteHeader {
 			flex-basis: 100%;
 			margin-top: 2rem;
 		}
@@ -457,10 +542,11 @@ max-width: 900px;
 		margin: 2rem auto;
 		.heartHover {
 			background-color: var(--secondaire);
-		}}
-		.nomDuRestaurant_titre:hover {
-			  transition-duration: 1s;
-			transform: scale(1.01);
+		}
+	}
+	.nomDuRestaurant_titre:hover {
+		transition-duration: 1s;
+		transform: scale(1.01);
 	}
 	.commander {
 		max-width: 900px;
@@ -473,8 +559,7 @@ max-width: 900px;
 			font-size: 1.4rem;
 		}
 	}
-		.footer2{
+	.footer2 {
 		width: 900px;
 	}
 }
-
