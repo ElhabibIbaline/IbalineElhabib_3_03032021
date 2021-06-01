@@ -13,6 +13,11 @@
   --background: #f6f6f6;
 }
 
+body {
+  font-family: "Roboto";
+  font-size: 1.2rem;
+}
+
 #chargement {
   background-color: #9356dc;
   position: fixed;
@@ -70,7 +75,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border: 10px solid var(--primaire);
+  border-right: 10px solid transparent;
+  border-left: 10px solid var(--primaire);
   border-top: 10px solid var(--secondaire);
   border-bottom: 10px solid var(--tertiaire);
   border-radius: 50%;
@@ -401,6 +407,7 @@ main {
 
 .heartHover:hover {
   color: var(--primaire);
+  background-color: white;
   opacity: 1;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
@@ -540,13 +547,13 @@ a {
           align-items: center;
   padding: 1rem;
   max-width: 900px;
-  margin: 0.5rem auto;
+  margin: 1rem auto 2rem;
 }
 
 .restaurant .restaurantEntresPlats .nomDuRestaurant_titre h2 {
   font-family: "Shrikhand";
-  font-size: 1.5rem;
-  font-weight: normal;
+  font-size: 1.7rem;
+  font-weight: bold;
 }
 
 .restaurant .restaurantEntresPlats .menu {
@@ -556,6 +563,7 @@ a {
 .restaurant .restaurantEntresPlats .menu .trait {
   width: 3rem;
   border: 2px solid var(--tertiaire);
+  background-color: var(--tertiaire);
 }
 
 .restaurant .restaurantEntresPlats .menu .menuEntree li p {
@@ -571,7 +579,7 @@ a {
   border-radius: 1rem;
   margin: 1rem 0;
   font-size: 1rem;
-  font-family: "Roboto", serif;
+  font-family: "Roboto", sans-serif;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   cursor: pointer;
@@ -583,11 +591,16 @@ a {
 
 .restaurant .restaurantEntresPlats .menu .menuEntree li .menuTitre {
   padding: 1rem 1rem 0 1rem;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 
 .restaurant .restaurantEntresPlats .menu .menuEntree li .menuSousTitre {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
 }
 
 .restaurant .restaurantEntresPlats .menu .menuEntree li .menuConfirmation {
@@ -751,7 +764,7 @@ a {
     border-radius: 1.5rem;
     margin: 2rem auto;
   }
-  .heartHover {
+  .nomDuRestaurant_titre .heartHover {
     background-color: var(--secondaire);
   }
   .nomDuRestaurant_titre:hover {
