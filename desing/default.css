@@ -31,10 +31,10 @@ body {
   height: 100%;
   background-color: #ffffffb8;
   z-index: 10;
-  animation: finChargement 4s both;
-  -moz-animation: finChargement 4s both;
-  -webkit-animation: finChargement 4s both;
-  -o-animation: finChargement 4s both;
+  animation: finChargement 6s both;
+  -moz-animation: finChargement 6s both;
+  -webkit-animation: finChargement 6s both;
+  -o-animation: finChargement 6s both;
 }
 
 @keyframes finChargement {
@@ -83,8 +83,8 @@ body {
   width: 100px;
   height: 100px;
   opacity: 0.7;
-  -webkit-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 0.5s linear infinite;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
@@ -186,24 +186,30 @@ main {
   padding: 1rem 2rem;
   margin: 0.5rem 0 1rem 0;
   font-family: "Roboto";
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
-  border-radius: 2rem;
+  border-radius: 45px;
   border: none;
-  background-color: var(--secondaire);
+  background-color: var(--primaire);
   color: white;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   cursor: pointer;
+  opacity: 0.8;
+  -webkit-box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(340deg, var(--primaire) 0%, var(--secondaire) 100%);
 }
 
 .section_presentation .btn:hover {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: linear-gradient(340deg, var(--primaire) 0%, var(--secondaire) 100%);
 }
 
 .section_fonctionnement {
@@ -222,24 +228,26 @@ main {
 }
 
 .section_btn {
-  /*	background-color: yellow;*/
+  /*background-color: yellow;*/
   font-family: "Roboto";
   font-weight: normal;
 }
 
 .section_btn .section_fonctionnement_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #faf7f7;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 1.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
   cursor: pointer;
-}
-
-.section_btn .section_fonctionnement_btn:hover {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
 }
 
 .section_btn .btn_action_3 {
@@ -250,13 +258,14 @@ main {
   background-color: var(--primaire);
   color: white;
   border-radius: 50%;
-  padding: 0.4rem 0.6rem;
-  margin-left: -2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+  margin-left: -2.5rem;
 }
 
 .section_btn .fas {
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .section_btn .fa-store {
@@ -264,15 +273,9 @@ main {
 }
 
 .section_btn .section_fonctionnement_btn_action {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-family: "Roboto";
   font-weight: bold;
-}
-
-.section_fonctionnement_btn:hover {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transform: scale(1s);
-          transform: scale(1s);
 }
 
 @media screen and (min-width: 800px) {
@@ -302,6 +305,11 @@ main {
   max-width: 1500px;
   padding: 1rem;
   font-family: "Roboto";
+  /*
+	.section_restaurants_carte:hover {
+		transition-duration: 1s;
+		transform: scale(1.01);
+	}*/
 }
 
 .section_restaurants .carte_description_1 {
@@ -312,7 +320,7 @@ main {
 
 .section_restaurants .carte_description_1 h4 {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .section_restaurants h2 {
@@ -370,13 +378,6 @@ main {
   left: 68%;
 }
 
-.section_restaurants .section_restaurants_carte:hover {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-}
-
 .section_restaurants_carte_description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,16 +402,16 @@ main {
 .heartHover {
   background-color: white;
   opacity: 0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .heartHover:hover {
   color: var(--primaire);
   background-color: white;
   opacity: 1;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (min-width: 1050px) {
@@ -552,8 +553,8 @@ a {
 
 .restaurant .restaurantEntresPlats .nomDuRestaurant_titre h2 {
   font-family: "Shrikhand";
-  font-size: 1.7rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .restaurant .restaurantEntresPlats .menu {
@@ -693,25 +694,30 @@ a {
 .commander {
   max-width: 1500px;
   margin: 2rem auto;
-  /*	background-color: blueviolet;*/
   text-align: center;
 }
 
-.commander .btn_commander:hover {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .commander .btn_commander {
-  padding: 0.5rem 1.5rem;
-  border: 1px solid;
-  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 2.5rem;
   color: white;
-  background-color: var(--secondaire);
+  background-color: violet;
   cursor: pointer;
   margin: 2rem auto;
+  -webkit-box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(340deg, var(--primaire) 0%, var(--secondaire) 100%);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.commander .btn_commander:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (min-width: 750px) {
@@ -743,7 +749,8 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .menu-1, .menu-3 {
+  .menu-1,
+  .menu-3 {
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2;
@@ -760,19 +767,18 @@ a {
             order: -1;
   }
   .nomDuRestaurant_titre {
-    background-color: var(--secondaire);
+    background-color: #f0b2f0;
     border-radius: 1.5rem;
     margin: 2rem auto;
   }
   .nomDuRestaurant_titre .heartHover {
-    background-color: var(--secondaire);
+    background-color: #f0b2f0;
   }
-  .nomDuRestaurant_titre:hover {
-    -webkit-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
-  }
+  /*
+	.nomDuRestaurant_titre:hover {
+		transition-duration: 1s;
+		transform: scale(1.01);
+	}*/
   .commander {
     background-color: #f2f2f2;
     text-align: center;

@@ -1,173 +1,168 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="desing/default.css"/>
-  <title>Ohmyfood-sass</title>
-   <script
-      src="https://kit.fontawesome.com/4fc20de488.js"
-      crossorigin="anonymous"
-    ></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="desing/default.css" />
+    <title>Ohmyfood-sass</title>
+    <script src="https://kit.fontawesome.com/4fc20de488.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <div id="chargement">
-			<div id="chargementSpinner">
-				<span class="spinner" id="spinner-1"></span>
-			</div>
-		</div>
-
-  <header>
-    <nav class="header">
-       <h1> <!--<img src="../img/logo/ohmyfood.png" alt="logo_ohmyfood" class="logo"/> <br>--> <img src="./img/logo/ohmyfood.png" alt="logo_ohmyfood" class="logo"/></h1>
-    </nav>
-  </header>
-  <!--main-->
-  <main>
-    <section class="section_location">
-      <h4><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h4>
-    </section>
-    <section class="section_presentation"><!--section 2 df-->
-      <h2 class="section_presentation_h2">
-        Réservez le menu qui vous convient
-      </h2>
-      <h4 class="section_presentation_h4">
-        Découvrez des restaurants d'exception, sélectionnés par nos soins.
-      </h4>
-      <button class="btn">Explorez nos restaurants</button>
-    </section>
-    <section class="section_fonctionnement">
-     <div class="section_fonctionnement_titre"> <h2>Fonctionnement</h2></div>
-     <div class="section_btn">
-        <div class="section_fonctionnement_btn">
-        <span class="section_fonctionnement_btn_etapes etape_1">1</span>
-        <span> <i class="fas fa-mobile-alt"></i></span>
-        <span class="section_fonctionnement_btn_action">Choisissez votre
-        restaurant</span>
-      </div>
-        <div class="section_fonctionnement_btn">
-        <span class="section_fonctionnement_btn_etapes etape_1">2</span>
-        <span> <i class="fas fa-list-ul"></i></span>
-        <span class="section_fonctionnement_btn_action">Composez votre menu</span>
-      </div>
-      <div class="section_fonctionnement_btn btn_action_3">
-        <span class="section_fonctionnement_btn_etapes etape_1">3</span>
-        <span> <i class="fas fa-store"></i></span>
-        <span class="section_fonctionnement_btn_action ">Dégustez au restaurant</span>
-      </div>
-    </section>
-
-    <section class="section_restaurants">
-      <h2 class="section_restaurants_titre">Restaurants</h2>
-      <div class="section_restaurant_cartes">
-        <article class="section_restaurants_carte carte carte_1">         
-          <a href="pages_html/laPaletteDuGout.html" title="La palette du goût" target="_blank">    
-              <div class="section_restaurants_carte_img cart_img img_1">
-              <div class="img_btn"> 
-                 <img
-                src="img/restaurants/La-palette-du-goût.jpg"
-                alt="La palette du goût"/>
-                    <h3 class="nouveau">Nouveau</h3>
-              </div>
-              <div class="section_restaurants_carte_description carte_description">
-                    <div class=" carte_description_1">
-                      <h4>La palette du goût</h4>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div class="section_restaurants_carte_description_souhait icone_coeur">
-                      <i class="far fa-heart fa-heart-1"></i>
-                      <i class="fas fa-heart heartHover like"></i>
-                    </div>
-              </div>
-	      	</a>
-      </article>
-
-              <article class="section_restaurants_carte carte carte_2">
-          <a href="pages_html/laNoteEnchantee.html" title="La note enchantée" target="_blank">
-
-              <div class="section_restaurants_carte_img cart_img img_1">
-       <div class="img_btn"> 
-                 <img
-                src="img/restaurants/La-note-enchantée.jpg"
-                alt="La palette du goût"/>
-                    <h3 class="nouveau">Nouveau</h3>
-              </div>
-              <div class="section_restaurants_carte_description carte_description">
-                    <div class=" carte_description_1">
-                      <h4>La note enchantée</h4>
-                        <p>Charonne</p>
-                    </div>
-                 <div class="section_restaurants_carte_description_souhait icone_coeur">
-                      <i class="far fa-heart fa-heart-1"></i>
-                      <i class="fas fa-heart heartHover like"></i>
-                    </div>
-              </div>
-	      	</a>
-      </article>
-
-      <article class="section_restaurants_carte carte carte_3">
-       <a href="pages_html/aLaFrançaise.html" title="À la française" target="_blank">
-
-              <div class="section_restaurants_carte_img cart_img img_1">
-                <img
-              src="img/restaurants/A-la-française.jpg"
-                alt="La palette du goût"/>
-              </div>
-              <div class="section_restaurants_carte_description carte_description">
-                    <div class=" carte_description_1">
-                      <h4>À la française</h4>
-                        <p>Cité Roug</p>
-                    </div>
-                     <div class="section_restaurants_carte_description_souhait icone_coeur">
-                      <i class="far fa-heart fa-heart-1"></i>
-                      <i class="fas fa-heart heartHover like"></i>
-                    </div>
-              </div>
-	      	</a>
-      </article>
-
-       <article class="section_restaurants_carte carte carte_4">
-       <a href="pages_html/leDeliceDesSens.html" title="Le délice des sens" target="_blank">
-              <div class="section_restaurants_carte_img cart_img img_1">
-                <img
-             src="img/restaurants/Le-délice-des-sens.jpg"
-                alt="La palette du goût"/>
-              </div>
-              <div class="section_restaurants_carte_description carte_description">
-                    <div class=" carte_description_1">
-                      <h4>Le délice des sens</h4>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                      <div class="section_restaurants_carte_description_souhait icone_coeur">
-                      <i class="far fa-heart fa-heart-1"></i>
-                      <i class="fas fa-heart heartHover like"></i>
-                    </div>
-              </div>
-	      	</a>
-      </article>
-</div>
-</section>
-</main>
-<!--footer-->
-<footer>
-    <div class="footer">
-          <h5 class="footer_header">ohmyfood</h5>
-        <p class="proposerUnRestaurant footerInfos">
-          <i class="fas fa-utensils"></i>Proposer un restaurant
-        </p>
-        <p class="devenirPartenair footerInfos">
-          <i class="fas fa-hands-helping"></i>Devenir partenaire
-        </p>
-        <p class="mentionsLegales footerInfos">Mentions légales</p>
-     <p class="contact footerInfos"> <a href="mailto:info@ohmyfood.com">Contact </a> </p>
+    <div id="chargement">
+        <div id="chargementSpinner">
+            <span class="spinner" id="spinner-1"></span>
+        </div>
     </div>
-</footer>
+
+    <header>
+        <nav class="header">
+            <h1>
+                <!--<img src="../img/logo/ohmyfood.png" alt="logo_ohmyfood" class="logo"/> <br>--><img src="./img/logo/ohmyfood.png" alt="logo_ohmyfood" class="logo" /></h1>
+        </nav>
+    </header>
+    <!--main-->
+    <main>
+        <section class="section_location">
+            <h4><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h4>
+        </section>
+        <section class="section_presentation">
+            <!--section 2 df-->
+            <h2 class="section_presentation_h2">
+                Réservez le menu qui vous convient
+            </h2>
+            <h4 class="section_presentation_h4">
+                Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </h4>
+            <button class="btn">Explorez nos restaurants</button>
+        </section>
+        <section class="section_fonctionnement">
+            <div class="section_fonctionnement_titre">
+                <h2>Fonctionnement</h2>
+            </div>
+            <div class="section_btn">
+                <div class="section_fonctionnement_btn">
+                    <span class="section_fonctionnement_btn_etapes etape_1">1</span>
+                    <span> <i class="fas fa-mobile-alt"></i></span>
+                    <span class="section_fonctionnement_btn_action">Choisissez votre
+restaurant</span>
+                </div>
+                <div class="section_fonctionnement_btn">
+                    <span class="section_fonctionnement_btn_etapes etape_1">2</span>
+                    <span> <i class="fas fa-list-ul"></i></span>
+                    <span class="section_fonctionnement_btn_action">Composez votre menu</span>
+                </div>
+                <div class="section_fonctionnement_btn btn_action_3">
+                    <span class="section_fonctionnement_btn_etapes etape_1">3</span>
+                    <span> <i class="fas fa-store"></i></span>
+                    <span class="section_fonctionnement_btn_action ">Dégustez au restaurant</span>
+                </div>
+        </section>
+
+        <section class="section_restaurants">
+            <h2 class="section_restaurants_titre">Restaurants</h2>
+            <div class="section_restaurant_cartes">
+                <article class="section_restaurants_carte carte carte_1">
+                    <a href="pages_html/laPaletteDuGout.html" title="La palette du goût" target="_blank">
+                        <div class="section_restaurants_carte_img cart_img img_1">
+                            <div class="img_btn">
+                                <img src="img/restaurants/La-palette-du-goût.jpg" alt="La palette du goût" />
+                                <h3 class="nouveau">Nouveau</h3>
+                            </div>
+                            <div class="section_restaurants_carte_description carte_description">
+                                <div class=" carte_description_1">
+                                    <h4>La palette du goût</h4>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div class="section_restaurants_carte_description_souhait icone_coeur">
+                                    <i class="far fa-heart fa-heart-1"></i>
+                                    <i class="fas fa-heart heartHover like"></i>
+                                </div>
+                            </div>
+                    </a>
+                </article>
+
+                <article class="section_restaurants_carte carte carte_2">
+                    <a href="pages_html/laNoteEnchantee.html" title="La note enchantée" target="_blank">
+
+                        <div class="section_restaurants_carte_img cart_img img_1">
+                            <div class="img_btn">
+                                <img src="img/restaurants/La-note-enchantée.jpg" alt="La palette du goût" />
+                                <h3 class="nouveau">Nouveau</h3>
+                            </div>
+                            <div class="section_restaurants_carte_description carte_description">
+                                <div class=" carte_description_1">
+                                    <h4>La note enchantée</h4>
+                                    <p>Charonne</p>
+                                </div>
+                                <div class="section_restaurants_carte_description_souhait icone_coeur">
+                                    <i class="far fa-heart fa-heart-1"></i>
+                                    <i class="fas fa-heart heartHover like"></i>
+                                </div>
+                            </div>
+                    </a>
+                </article>
+
+                <article class="section_restaurants_carte carte carte_3">
+                    <a href="pages_html/aLaFrançaise.html" title="À la française" target="_blank">
+
+                        <div class="section_restaurants_carte_img cart_img img_1">
+                            <img src="img/restaurants/A-la-française.jpg" alt="La palette du goût" />
+                        </div>
+                        <div class="section_restaurants_carte_description carte_description">
+                            <div class=" carte_description_1">
+                                <h4>À la française</h4>
+                                <p>Cité Roug</p>
+                            </div>
+                            <div class="section_restaurants_carte_description_souhait icone_coeur">
+                                <i class="far fa-heart fa-heart-1"></i>
+                                <i class="fas fa-heart heartHover like"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="section_restaurants_carte carte carte_4">
+                    <a href="pages_html/leDeliceDesSens.html" title="Le délice des sens" target="_blank">
+                        <div class="section_restaurants_carte_img cart_img img_1">
+                            <img src="img/restaurants/Le-délice-des-sens.jpg" alt="La palette du goût" />
+                        </div>
+                        <div class="section_restaurants_carte_description carte_description">
+                            <div class=" carte_description_1">
+                                <h4>Le délice des sens</h4>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="section_restaurants_carte_description_souhait icone_coeur">
+                                <i class="far fa-heart fa-heart-1"></i>
+                                <i class="fas fa-heart heartHover like"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                </div>
+        </section>
+    </main>
+    <!--footer-->
+    <footer>
+        <div class="footer">
+            <h5 class="footer_header">ohmyfood</h5>
+            <p class="proposerUnRestaurant footerInfos">
+                <i class="fas fa-utensils"></i>Proposer un restaurant
+            </p>
+            <p class="devenirPartenair footerInfos">
+                <i class="fas fa-hands-helping"></i>Devenir partenaire
+            </p>
+            <p class="mentionsLegales footerInfos">Mentions légales</p>
+            <p class="contact footerInfos"> <a href="mailto:info@ohmyfood.com">Contact </a> </p>
+        </div>
+    </footer>
 </body>
+
 </html>
