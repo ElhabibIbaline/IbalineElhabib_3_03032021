@@ -167,13 +167,13 @@ main {
         cursor: pointer;
         opacity: 0.8;
         box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
-        background: linear-gradient( 340deg, var(--primaire) 0%, var(--secondaire) 100%);
+        background: linear-gradient(340deg, #9356dc, #ff79da);
     }
     .btn:hover {
         opacity: 1;
         transform: scale(1.05);
         box-shadow: none;
-        background: linear-gradient( 340deg, var(--primaire) 0%, var(--secondaire) 100%);
+        /*  background: linear-gradient( 340deg, var(--primaire) 0%, var(--secondaire) 100%);*/
     }
 }
 
@@ -261,7 +261,7 @@ main {
     }
     h2 {
         font-family: "Roboto";
-        font-weight: 550;
+        font-weight: 500;
         font-size: 1.5rem;
         padding: 1rem;
     }
@@ -445,11 +445,19 @@ a {
         }
         .menu {
             margin: auto;
-            .trait {
+            .carteHeader::after {
+                content: "";
+                position: absolute;
                 width: 3rem;
                 border: 2px solid var(--tertiaire);
                 background-color: var(--tertiaire);
             }
+            /*
+            .trait {
+                width: 3rem;
+                border: 2px solid var(--tertiaire);
+                background-color: var(--tertiaire);
+            }*/
             .menuEntree {
                 li p {
                     text-overflow: ellipsis;
@@ -571,7 +579,7 @@ a {
         cursor: pointer;
         margin: 2rem auto;
         box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
-        background: linear-gradient( 340deg, var(--primaire) 0%, var(--secondaire) 100%);
+        background: linear-gradient(340deg, #9356dc, #ff79da);
         transition-duration: 1s;
         transform: scale(1);
         &:hover {
@@ -580,7 +588,7 @@ a {
     }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
     .header_paletteDuGout {
         margin: auto;
     }
@@ -596,6 +604,12 @@ a {
             flex-direction: column;
             justify-content: space-between;
         }
+    }
+    #menu-b {
+        margin-top: 0;
+    }
+    #menu-c {
+        margin-top: 0;
     }
     .menu-1,
     .menu-3 {
@@ -630,6 +644,12 @@ a {
             padding: 0.5rem 2.5rem;
             border-radius: 0.5rem;
             font-size: 1.4rem;
+        }
+        .btn-2 {
+            margin-top: -6rem;
+            margin-left: 7%;
+            position: absolute;
+            z-index: 9999;
         }
     }
 }

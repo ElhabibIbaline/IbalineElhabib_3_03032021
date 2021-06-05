@@ -200,7 +200,7 @@ main {
   opacity: 0.8;
   -webkit-box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(340deg, var(--primaire) 0%, var(--secondaire) 100%);
+  background: linear-gradient(340deg, #9356dc, #ff79da);
 }
 
 .section_presentation .btn:hover {
@@ -209,7 +209,7 @@ main {
           transform: scale(1.05);
   -webkit-box-shadow: none;
           box-shadow: none;
-  background: linear-gradient(340deg, var(--primaire) 0%, var(--secondaire) 100%);
+  /*  background: linear-gradient( 340deg, var(--primaire) 0%, var(--secondaire) 100%);*/
 }
 
 .section_fonctionnement {
@@ -325,7 +325,7 @@ main {
 
 .section_restaurants h2 {
   font-family: "Roboto";
-  font-weight: 550;
+  font-weight: 500;
   font-size: 1.5rem;
   padding: 1rem;
 }
@@ -559,9 +559,17 @@ a {
 
 .restaurant .restaurantEntresPlats .menu {
   margin: auto;
+  /*
+            .trait {
+                width: 3rem;
+                border: 2px solid var(--tertiaire);
+                background-color: var(--tertiaire);
+            }*/
 }
 
-.restaurant .restaurantEntresPlats .menu .trait {
+.restaurant .restaurantEntresPlats .menu .carteHeader::after {
+  content: "";
+  position: absolute;
   width: 3rem;
   border: 2px solid var(--tertiaire);
   background-color: var(--tertiaire);
@@ -708,7 +716,7 @@ a {
   margin: 2rem auto;
   -webkit-box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(340deg, var(--primaire) 0%, var(--secondaire) 100%);
+  background: linear-gradient(340deg, #9356dc, #ff79da);
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   -webkit-transform: scale(1);
@@ -720,7 +728,7 @@ a {
           transform: scale(1.1);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
   .header_paletteDuGout {
     margin: auto;
   }
@@ -748,6 +756,12 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  #menu-b {
+    margin-top: 0;
+  }
+  #menu-c {
+    margin-top: 0;
   }
   .menu-1,
   .menu-3 {
@@ -788,6 +802,12 @@ a {
     padding: 0.5rem 2.5rem;
     border-radius: 0.5rem;
     font-size: 1.4rem;
+  }
+  .commander .btn-2 {
+    margin-top: -6rem;
+    margin-left: 7%;
+    position: absolute;
+    z-index: 9999;
   }
 }
 
