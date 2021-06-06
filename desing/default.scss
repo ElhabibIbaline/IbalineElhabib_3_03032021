@@ -173,7 +173,6 @@ main {
         opacity: 1;
         transform: scale(1.05);
         box-shadow: none;
-        /*  background: linear-gradient( 340deg, var(--primaire) 0%, var(--secondaire) 100%);*/
     }
 }
 
@@ -191,7 +190,6 @@ main {
 }
 
 .section_btn {
-    /*background-color: yellow;*/
     font-family: "Roboto";
     font-weight: normal;
     .section_fonctionnement_btn {
@@ -300,11 +298,6 @@ main {
             left: 68%;
         }
     }
-    /*
-	.section_restaurants_carte:hover {
-		transition-duration: 1s;
-		transform: scale(1.01);
-	}*/
 }
 
 .section_restaurants_carte_description {
@@ -392,7 +385,7 @@ a {
 }
 
 
-/*pages html*/
+/*pages html------------------------------------------------*/
 
 .header_paletteDuGout {
     background-color: rgb(242, 242, 242);
@@ -439,12 +432,12 @@ a {
             margin: 1rem auto 2rem;
             h2 {
                 font-family: "Shrikhand";
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 font-weight: 500;
             }
         }
         .menu {
-            margin: auto;
+            margin: 2.5rem auto;
             .carteHeader::after {
                 content: "";
                 position: absolute;
@@ -452,13 +445,8 @@ a {
                 border: 2px solid var(--tertiaire);
                 background-color: var(--tertiaire);
             }
-            /*
-            .trait {
-                width: 3rem;
-                border: 2px solid var(--tertiaire);
-                background-color: var(--tertiaire);
-            }*/
             .menuEntree {
+                margin-top: 2rem;
                 li p {
                     text-overflow: ellipsis;
                     overflow: hidden;
@@ -531,7 +519,7 @@ a {
 }
 
 
-/*Animation apparitionMenu*/
+/*Animation apparitionMenu----------------------------------------------------------------------*/
 
 .menu {
     animation: apparitionMenu 1s both;
@@ -563,12 +551,14 @@ a {
 }
 
 
-/*fin animation apparitionMenu*/
+/*fin animation apparitionMenu---------------------------------------------------------------------------------*/
 
 .commander {
     max-width: 1500px;
-    margin: 2rem auto;
+    margin: 0 auto;
+    padding-bottom: 3rem;
     text-align: center;
+    background-color: rgb(242, 242, 242);
     .btn_commander {
         padding: 1rem 3rem;
         border: none;
@@ -577,7 +567,7 @@ a {
         color: white;
         background-color: violet;
         cursor: pointer;
-        margin: 2rem auto;
+        margin: auto;
         box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
         background: linear-gradient(340deg, #9356dc, #ff79da);
         transition-duration: 1s;
@@ -605,20 +595,14 @@ a {
             justify-content: space-between;
         }
     }
-    #menu-b {
-        margin-top: 0;
-    }
-    #menu-c {
-        margin-top: 0;
-    }
-    .menu-1,
+    .menu-2,
     .menu-3 {
         flex-grow: 2;
     }
     .menu-3 {
         padding-left: 2rem;
     }
-    .menu-2 {
+    .menu-1 {
         flex-basis: 100%;
         margin: auto;
         order: -1;
@@ -631,11 +615,6 @@ a {
             background-color: rgb(240, 178, 240);
         }
     }
-    /*
-	.nomDuRestaurant_titre:hover {
-		transition-duration: 1s;
-		transform: scale(1.01);
-	}*/
     .commander {
         background-color: rgb(242, 242, 242);
         text-align: center;
@@ -645,16 +624,10 @@ a {
             border-radius: 0.5rem;
             font-size: 1.4rem;
         }
-        .btn-2 {
-            margin-top: -6rem;
-            margin-left: 7%;
-            position: absolute;
-            z-index: 9999;
-        }
     }
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1100px) {
     .menus {
         display: flex;
         flex-wrap: nowrap;
@@ -666,6 +639,15 @@ a {
             flex-basis: 100%;
             order: 1;
             padding: 1rem;
+            align-self: flex-start;
+        }
+    }
+    #commander {
+        margin: -10rem auto 1rem auto;
+        .btn_commander {
+            padding: 1rem 4rem;
+            font-size: 1.5rem;
+            margin-left: 30%;
         }
     }
 }
