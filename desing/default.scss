@@ -29,10 +29,10 @@ body {
     height: 100%;
     background-color: #ffffffb8;
     z-index: 10;
-    animation: finChargement 6s both;
-    -moz-animation: finChargement 6s both;
-    -webkit-animation: finChargement 6s both;
-    -o-animation: finChargement 6s both;
+    animation: finChargement 5s both;
+    -moz-animation: finChargement 5s both;
+    -webkit-animation: finChargement 5s both;
+    -o-animation: finChargement 5s both;
 }
 
 @keyframes finChargement {
@@ -75,9 +75,9 @@ body {
     width: 100px;
     height: 100px;
     opacity: 0.7;
+    animation: spin 0.5s linear infinite;
     -webkit-animation: spin 0.5s linear infinite;
     -o-animation: spin 0.5s linear infinite;
-    animation: spin 0.5s linear infinite;
     animation-delay: 0.2s;
 }
 
@@ -165,14 +165,14 @@ main {
         transition-duration: 0.8s;
         transform: scale(1);
         cursor: pointer;
-        opacity: 0.8;
         box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
         background: linear-gradient(340deg, #9356dc, #ff79da);
-    }
-    .btn:hover {
-        opacity: 1;
-        transform: scale(1.05);
-        box-shadow: none;
+        &:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+            box-shadow: 1px 13px 8px -6px rgba(0, 0, 0, 0.3);
+            color: lighten(#ff79da, 50%);
+        }
     }
 }
 
@@ -187,53 +187,53 @@ main {
         font-family: "Roboto";
         font-weight: bold;
     }
-}
-
-.section_btn {
-    font-family: "Roboto";
-    font-weight: normal;
-    .section_fonctionnement_btn {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: rgb(250, 247, 247);
-        margin: 1rem 1rem 1rem 1.5rem;
-        padding: 1.5rem;
-        border-radius: 1.5rem;
-        cursor: pointer;
-    }
-    .btn_action_3 {
-        background-color: rgb(247, 228, 247);
-    }
-    .section_fonctionnement_btn_etapes {
-        background-color: var(--primaire);
-        color: white;
-        border-radius: 50%;
-        font-size: 1.2rem;
-        padding: 0.5rem 0.8rem 0.3rem 0.8rem;
-        margin-left: -2.5rem;
-    }
-    .fas {
-        margin: 0 1rem;
-        font-size: 1.8rem;
-    }
-    .fa-store {
-        color: var(--primaire);
-    }
-    .section_fonctionnement_btn_action {
-        font-size: 1.3rem;
+    .fonctionnement_etapes {
         font-family: "Roboto";
-        font-weight: bold;
+        font-weight: normal;
+        /*   .section_fonctionnement_btn*/
+        .fonctionnement_etape {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgb(250, 247, 247);
+            margin: 1rem 1rem 1rem 1.5rem;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            /* .section_fonctionnement_btn_etapes*/
+            .section_fonctionnement_etape_1 {
+                background-color: var(--primaire);
+                color: white;
+                border-radius: 50%;
+                font-size: 1.2rem;
+                padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+                margin-left: -2.5rem;
+            }
+            .fas {
+                margin: 0 1rem;
+                font-size: 1.8rem;
+            }
+            .fa-store {
+                color: var(--primaire);
+            }
+            .section_fonctionnement_action {
+                font-size: 1.3rem;
+                font-family: "Roboto";
+                font-weight: bold;
+            }
+        }
+        .etapeDegustation {
+            background-color: rgb(247, 228, 247);
+        }
     }
 }
 
 @media screen and (min-width: 800px) {
     .section_fonctionnement {
         background-color: var(--background);
-        .section_btn {
+        .fonctionnement_etapes {
             display: flex;
             justify-content: space-between;
-            .section_fonctionnement_btn {
+            .fonctionnement_etape {
                 flex-grow: 1;
                 background-color: rgb(247, 228, 247);
             }
@@ -386,7 +386,6 @@ a {
 
 
 /*pages html------------------------------------------------*/
-
 .header_paletteDuGout {
     background-color: rgb(242, 242, 242);
     display: flex;
@@ -429,7 +428,7 @@ a {
             align-items: center;
             padding: 1rem;
             max-width: 900px;
-            margin: 1rem auto 2rem;
+            margin: 1rem auto;
             h2 {
                 font-family: "Shrikhand";
                 font-size: 1.3rem;
@@ -437,7 +436,7 @@ a {
             }
         }
         .menu {
-            margin: 2.5rem auto;
+            margin: 2rem auto;
             .carteHeader::after {
                 content: "";
                 position: absolute;
@@ -555,8 +554,8 @@ a {
 
 .commander {
     max-width: 1500px;
-    margin: 0 auto;
-    padding-bottom: 3rem;
+    margin:0 auto;
+    padding: 2rem ;
     text-align: center;
     background-color: rgb(242, 242, 242);
     .btn_commander {
@@ -567,13 +566,16 @@ a {
         color: white;
         background-color: violet;
         cursor: pointer;
-        margin: auto;
+        margin: 0 auto 2rem;
         box-shadow: 1px 12px 9px -8px rgba(0, 0, 0, 0.3);
         background: linear-gradient(340deg, #9356dc, #ff79da);
         transition-duration: 1s;
         transform: scale(1);
         &:hover {
-            transform: scale(1.1);
+            opacity: 0.9;
+            transform: scale(1.05);
+            box-shadow: 1px 13px 8px -6px rgba(0, 0, 0, 0.3);
+            color: lighten(#ff79da, 50%);
         }
     }
 }
@@ -593,6 +595,7 @@ a {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            margin: 0 auto;
         }
     }
     .menu-2,
@@ -610,7 +613,7 @@ a {
     .nomDuRestaurant_titre {
         background-color: rgb(240, 178, 240);
         border-radius: 1.5rem;
-        margin: 2rem auto;
+        margin: 2rem auto 0;
         .heartHover {
             background-color: rgb(240, 178, 240);
         }
@@ -620,9 +623,7 @@ a {
         text-align: center;
         margin: auto;
         .btn_commander {
-            padding: 0.5rem 2.5rem;
-            border-radius: 0.5rem;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
         }
     }
 }
@@ -643,7 +644,7 @@ a {
         }
     }
     #commander {
-        margin: -10rem auto 1rem auto;
+        margin: -9rem auto 0 auto;
         .btn_commander {
             padding: 1rem 4rem;
             font-size: 1.5rem;
