@@ -31,10 +31,10 @@ body {
   height: 100%;
   background-color: #ffffffb8;
   z-index: 10;
-  animation: finChargement 5s both;
-  -moz-animation: finChargement 5s both;
-  -webkit-animation: finChargement 5s both;
-  -o-animation: finChargement 5s both;
+  animation: finChargement 2s both;
+  -moz-animation: finChargement 2s both;
+  -webkit-animation: finChargement 2s both;
+  -o-animation: finChargement 2s both;
 }
 
 @keyframes finChargement {
@@ -44,7 +44,7 @@ body {
   100% {
     opacity: 0;
     display: none;
-    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -55,7 +55,7 @@ body {
   100% {
     opacity: 0;
     display: none;
-    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -629,7 +629,7 @@ a {
   content: "";
   position: absolute;
   right: -45px;
-  top: 20px;
+  top: 30px;
   width: 30px;
   height: 30px;
   background: url(../img/logo/confirm_logo.png);
