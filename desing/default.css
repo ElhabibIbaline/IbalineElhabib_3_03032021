@@ -31,15 +31,19 @@ body {
   height: 100%;
   background-color: #ffffffb8;
   z-index: 10;
-  animation: finChargement 2s both;
-  -moz-animation: finChargement 2s both;
-  -webkit-animation: finChargement 2s both;
-  -o-animation: finChargement 2s both;
+  animation: finChargement 3s both;
+  -moz-animation: finChargement 3s both;
+  -webkit-animation: finChargement 3s both;
+  -o-animation: finChargement 3s both;
 }
 
 @keyframes finChargement {
   80% {
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: none;
   }
   100% {
     opacity: 0;
@@ -83,7 +87,7 @@ body {
   width: 100px;
   height: 100px;
   opacity: 0.7;
-  animation: spin 0.5s linear infinite;
+  animation: spin .5s linear infinite;
   -webkit-animation: spin 0.5s linear infinite;
   -o-animation: spin 0.5s linear infinite;
   -webkit-animation-delay: 0.2s;
